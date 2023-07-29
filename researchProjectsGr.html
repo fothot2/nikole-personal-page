@@ -1,0 +1,233 @@
+<!DOCTYPE 
+  HTML PUBLIC 
+  "-//W3C//DTD HTML 4.01 Transitional//EN" 
+  "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+
+//
+// Copyright (C) Julian I. Kamil <julian.kamil@gmail.com>
+// No warranty is provided.  Use at your own risk.
+//
+// Commercial support is available through ESV Media Group
+// who can be reached at: http://www.ESV-i.com/.
+//
+// Name: simple.tmpl
+// Author: Julian I. Kamil <julian.kamil@gmail.com>
+// Created: 2005-05-18
+// Description:
+//     This is a simple skin for PmWiki. Please see:
+//         http://www.madhckr.com/project/PmWiki/SimpleSkin
+//     for a live example and doumentation.
+//
+// $Id: simple.tmpl,v 1.1 2005/08/17 19:24:54 julian Exp $
+//
+// History:
+//     2005-05-18  jik  Created.
+//     2005-06-21  jik  Added the directive that enables
+//                      the injection of additional stylesheets.
+//     2005/06/27  jik  Added SkinTone feature.
+//     2005/07/06  jik  Added group name in the title.
+//     2005/07/15  jik  Added code to style abbr on IE.
+//
+//     2005-11-02  ksc  Added SideBar & removed menu
+//                      Fixed IE detection
+//		2005-11-06	ksc	Changed old menu style in favor of *.PageActions (suggested by MarcSeibert)
+//						Fixed goofed isIE var
+//
+-->
+
+<html>
+    <head>
+        <title>Sotiris Nikoletseas Web Page : Main - Research Projects </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <meta name='robots' content='index,follow' />
+
+        <link rel='stylesheet' title="(NotSo) Simple" href='pub/skins/notsosimple/notsosimple.css' type='text/css' />
+
+		<script type="text/javascript">
+		<!-- //
+		
+		isIE = 0;
+		browser_type = navigator.appName;
+		if (browser_type == "Microsoft Internet Explorer") { 
+			document.write("<link href='pub/skins/notsosimple/notsosimple-ie.css' rel='stylesheet' type='text/css' />"); 
+			isIE = 1;
+		}
+
+        function styleAbbr() {
+            var oldBodyText, newBodyText, reg;
+            if (isIE) {
+                oldBodyText = document.body.innerHTML;
+                reg = /<ABBR([^>]*)>([^<]*)<\/ABBR>/g;
+                newBodyText = oldBodyText.replace(reg, '<ABBR $1><SPAN class=\"abbr\" $1>$2</SPAN></ABBR>');
+                document.body.innerHTML = newBodyText;
+            }
+        }
+
+        window.onload = function(){
+            styleAbbr();
+        };
+
+        // -->
+        </script>
+    </head>
+
+    <body bgcolor="#ffffff">
+	    
+		<div id="header" style="border: 1px none #ccf; 
+			background: url(pub/skins/notsosimple/image/Box-Top-Blue.jpg) no-repeat; " 
+            title='Main &raquo; Research Projects was last modified on March 23, 2006, at 02:13 PM'>
+            <table width="100%" style="padding: 0px; margin:0px;">
+                <tr>
+
+                    <td style="padding: 0px; margin:0px; border: none;">
+                        <div id="page-title"><a href='index.html'>Sotiris Nikoletseas Web Page</a></div>
+                        <div id="page-subtitle"><a href='index.html' title='Main Home'>Main</a> :: Research Projects</div>
+                    </td>
+                    <td align="right" width="120" 
+                        style="padding: 0px; margin:0px; padding-top: 16px; border: none;">
+                        <center>
+                            <a href="index.html"><img src="pub/skins/pmwiki/pmwiki-32.gif" border="0" /></a>
+
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="main">
+            <div id="menubar" style="display: none;">
+                <div id="wikicmds" align="right">
+
+					<ul><li class='browse'><a accesskey=''  class='selflink' href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.ResearchProjects'>View</a>
+</li><li class='edit'><a accesskey='e'  rel='nofollow'  class='wikilink' href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.ResearchProjects?action=edit'>Edit</a>
+</li><li class='diff'><a accesskey='h'  rel='nofollow'  class='wikilink' href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.ResearchProjects?action=diff'>History</a>
+</li><li class='upload'><a accesskey='ak_attach'  rel='nofollow'  class='wikilink' href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.ResearchProjects?action=upload'>Attach</a>
+</li><li class='print'><a accesskey=''  rel='nofollow'  class='wikilink' href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.ResearchProjects?action=print'>Print</a>
+</li></ul>
+
+                </div>
+                <div class="clearer"></div>
+
+            </div>
+
+            <div class="content-mat">
+                <div id="content">
+                                     <div id='sidebar'><ul><li><a class='selflink' href='indexGr.html'>Home Page</a>
+</li><li><a class='wikilink' href='currentPositionsGr.html'>&#913;&#954;&#945;&#948;&#951;&#956;&#945;&#970;&#954;&#941;&#962; &#921;&#948;&#953;&#972;&#964;&#951;&#964;&#949;&#962;</a>
+</li><li><a class='wikilink' href='researchInterestsGr.html'>&#917;&#961;&#949;&#965;&#957;&#951;&#964;&#953;&#954;&#940; &#917;&#957;&#948;&#953;&#945;&#966;&#941;&#961;&#959;&#957;&#964;&#945;</a>
+</li><li><a class='wikilink' href='scientificPublicationsGr.html'>&#917;&#960;&#953;&#963;&#964;&#951;&#956;&#959;&#957;&#953;&#954;&#941;&#962; &#916;&#951;&#956;&#959;&#963;&#953;&#949;&#973;&#963;&#949;&#953;&#962;</a>
+</li><li><a class='wikilink' href='invitedTalksTutorialsGr.html'>&#928;&#961;&#959;&#963;&#954;&#949;&#954;&#955;&#951;&#956;&#941;&#957;&#949;&#962; &#916;&#953;&#945;&#955;&#941;&#958;&#949;&#953;&#962;</a>
+
+</li><li><a class='wikilink' href='conferenceActivitiesGr.html'>&#916;&#953;&#949;&#952;&#957;&#942; &#931;&#965;&#957;&#941;&#948;&#961;&#953;&#945;</a>
+</li><li><a class='wikilink' href='editorReviewerGr.html'>&#916;&#953;&#949;&#952;&#957;&#942; &#928;&#949;&#961;&#953;&#959;&#948;&#953;&#954;&#940;</a>
+
+</li><li><a class='wikilink' href='teachingGr.html'>&#916;&#953;&#948;&#945;&#963;&#954;&#945;&#955;&#943;&#945;</a>
+</li><li><a class='wikilink' href='studentsGr.html'>&#924;&#949;&#964;&#945;&#960;&#964;&#965;&#967;&#953;&#945;&#954;&#959;&#943; &#934;&#959;&#953;&#964;&#951;&#964;&#941;&#962;</a>
+</li><li><a class='wikilink' href='bookGr.html'>&#914;&#953;&#946;&#955;&#943;&#959;</a>
+</li><li><a class='wikilink' href='researchProjectsGr.html'>&#917;&#961;&#949;&#965;&#957;&#951;&#964;&#953;&#954;&#940; &#904;&#961;&#947;&#945;</a>
+</li><li><a class='wikilink' href='articlesGr.html'>&#902;&#961;&#952;&#961;&#945; &#963;&#949; &#917;&#966;&#951;&#956;&#949;&#961;&#943;&#948;&#949;&#962;</a>
+</li><li><a class='wikilink' href='contactInfoGr.html'>&#931;&#964;&#959;&#953;&#967;&#949;&#943;&#945; &#917;&#960;&#953;&#954;&#959;&#953;&#957;&#969;&#957;&#943;&#945;&#962;</a>
+</li></ul><p class='vspace'></p>
+</div>
+                    <!--PageText-->
+
+<div id='wikitext'>
+<h2>Research-Professional Experience</h2>
+<p class='vspace'></p><p>(also available in <a class='urllink' href='uploads/Main/projects.doc' rel='nofollow'>.doc</a> and <a class='urllink' href='uploads/Main/projects.pdf' rel='nofollow'>.pdf</a> format)
+</p>
+<p class='vspace'></p><h3>Participation/Direction of R@D Projects</h3>
+<p class='vspace'></p><h4>a. Current European Union Funded Basic Research Projects</h4>
+<p class='vspace'></p><p>We emphasize here the participation/direction of Projects funded by the FET (Future and Emerging Technologies) Action of the Information Society Technologies (IST) Programme of the European Union, which funds long term/high risk research.
+</p>
+
+<p class='vspace'></p><ul><li>Scientific Coordinator for CTI in the Project ProSense ("Promote, Mobilize, Reinforce and Integrate Wireless Sensor Networking Research and Researchers: Towards Pervasive Networking of WBC and the EU:), EU/ Seventh Framework Programme/Cooperation/Support Action in the REGPOT-2007-3-01. (expected start: February 1, 2008)
+</li><li>Steering Committee Member of the Research Project «Foundations of Adaptive Networked Societies of Tiny Artefacts» (FRONTS, EU/IST/FET/Pervasive Adaptation). (expected start: February 1, 2008)
+</li><li>2005 - today: Scientific Coordinator of the Project ALGO.D.E.S. ("Algorithms for Smart Dust Networks"), funded by the Programme PENED of the Greek Ministry of Development/General Secretariat of Research and Technology (GSRT).
+</li><li>2005 - today: Integrated Project (IP) on Algorithmic Principles for Building Efficient Overlay Computers (AEOLUS, EU/IST). Leader of SubProject 5 (Wireless Extensions).
+</li><li>2004 - today: Integrated Project (IP) on Large Scale Information Systems (DELIS, EU/IST). Research in efficient algorithms for wireless networks.
+</li><li>2002 - today: Co-coordinator of the Project "Foundational Aspects of Global Computing Systems" (FLAGS, EU/IST/FET/Global Computing Proactive Initiative). Research in ad-hoc mobile networks and network stability.
+</li><li>2002 - today: Co-coordinator for CTI of the Project "Critical Resource Sharing for Co-operation in Complex Systems" (CRESCCO, EU/IST/FET/Global Computing Proactive Initiative). Research on frequency assignment problems in radio networks and fast communication in wireless networks.
+</li><li>2002 - today: Senior Researcher in the Project "Combinatorial Structure of Intractable problems" (COMBSTRU, EU, Research Training Networks Programme). Research in random walks analysis for communication in mobile networks and approximation algorithms for coloring problems.
+</li><li>2000 - 2003: Co-coordinator for CTI of the Project "Algorithms and Complexity in Future Technologies" (ALCOM-FT, EU/IST/FET Open). Research in algorithmic aspects of networks and fundamental techniques.
+</li><li>2000 - 2003: Senior Researcher in the Project "Approximation and Randomized Algorithms in Communication Networks" (ARACNE, EU, Research Training Networks Programme). Research in algorithmic issues of Radio Networks.
+</li></ul><p class='vspace'></p><h4>b. Other Projects (representative selection)</h4>
+<p class='vspace'></p><ul><li>2005 - today: Scientific Coordinator of the Project ALGO.D.E.S. ("Algorithms for Smart Dust Networks", GSRT PENED 2003 Programme).
+</li><li>2000 - 2003: CTI 's team co-coordinator and CTI 's Contact Person of the Project ASPIS ("An Authentication and Protection Innovative Software System for DVD ROM and Internet", EU IST Programme). 
+</li><li>2000 - 2004: Senior Researcher in the Project AMORE ("Algorithmic Methods for Optimizing the Railways in Europe", EU RTN Programme). 
+</li><li>1999 - 2001: CTI 's team Scientific Co-coordinator of the Project PLEIADA (Parallel Time - Scheduling of Human Resources over the INTERNET, GSRT PENED 99 Programme). 
+</li><li>1999 - 2001: CTI 's team Co-coordinator of the project ALCAD ("Algorithms for Mobile and Wireless Communication Networks", GSRT PENED 99 Programme). 
+</li><li>1999 - 2000 : CTI 's team Co-coordinator (with P. Spirakis) of the project STOICHIMA ("Efficient Algorithmic Support and Risk Management for the Prognostics Game Stoichima"), in cooperation with INTRALOT S.A. 
+</li><li>1999 - 2001 : CTI team leader for project "Risk Planning Process (RPP, BRITE EURAM)", in co-operation with INTRASOFT S.A. 
+</li><li>1999 - 2000 : Project SEC-YEN (Study for the security of the Networks of the Greek Ministry of Mercantile Marine). 
+
+</li><li>1998 - 2001: Site co-coordinator of project ALCOM-IT (Basic and applied research on Algorithms and Complexity). 
+</li><li>1998 - 1999: Project INTERREG (Creation of a Telematics Centre in Western Greece). 
+</li><li>1997 - 1999: Scientific co-ordinator of project SYN-IML (Design and implementation of the electronic magazines of Lambrakis Research Foundation in the Internet). 
+</li><li>1996 - 1999: Project ALCOM-IT; (Basic and applied research on Algorithms and Complexity). 
+</li><li>1995 - 1996: Project "Feasibility Study for the Greek Parliament' s Information System". 
+</li><li>1995 - 1996: Co-coordinator of the project "Pilot Network for the Schools in the Achaia county". 
+</li><li>1993 - 1996: Project GEPPCOM (ESPRIT Basic Research Action, "General Purpose Parallel Computing"). 
+</li><li>1993 - 1996: Project ALCOM II (ESPRIT Basic Research Action, "Algorithms and Complexity"). 
+</li></ul><p class='vspace'></p><h3>Executive Positions </h3>
+<p class='vspace'></p><ul><li>Director of Research Unit 1 ("Foundations of Computer Science, Related Technologies and Applications") (1999 - today).
+</li><li>Deputy Member of the Board of Executives of the Computer Technology Institute (2001 - today).
+</li></ul><p class='vspace'></p><h3>Participation in International Scientific Organizations</h3>
+<p class='vspace'></p><ul><li>Member of the European Association for Theoretical Computer Science (EATCS).
+
+</li><li>Member of the Association for Computing Machinery (ACM).
+</li><li>Member of the Special Interest Group on Algorithms and Computation Theory (SIGACT).   
+</li><li>Member of the IEEE Computer Society.
+</li></ul>
+</div>
+                </div>
+                <div class="clearer"></div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <div id="copyright">
+                <span style="float: left; padding-left: 20px;">
+                    &copy; 2008
+                </span>
+                <span style="float: right; display: block; padding-right: 20px;">
+                <a href="index.html"><img src="ukflagup.gif"></a>
+                    <span id='sitepoweredby' title='Powered by PmWiki'>
+    Powered by <a href='http://www.pmichaud.com/wiki/PmWiki/PmWiki' title='PmWiki Home'>PmWiki</a>
+
+</span>
+                </span>
+            </div>
+        </div>
+
+    </body>
+</html>
+

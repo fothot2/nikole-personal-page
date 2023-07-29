@@ -1,0 +1,492 @@
+<!DOCTYPE 
+  HTML PUBLIC 
+  "-//W3C//DTD HTML 4.01 Transitional//EN" 
+  "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+
+//
+// Copyright (C) Julian I. Kamil <julian.kamil@gmail.com>
+// No warranty is provided.  Use at your own risk.
+//
+// Commercial support is available through ESV Media Group
+// who can be reached at: http://www.ESV-i.com/.
+//
+// Name: simple.tmpl
+// Author: Julian I. Kamil <julian.kamil@gmail.com>
+// Created: 2005-05-18
+// Description:
+//     This is a simple skin for PmWiki. Please see:
+//         http://www.madhckr.com/project/PmWiki/SimpleSkin
+//     for a live example and doumentation.
+//
+// $Id: simple.tmpl,v 1.1 2005/08/17 19:24:54 julian Exp $
+//
+// History:
+//     2005-05-18  jik  Created.
+//     2005-06-21  jik  Added the directive that enables
+//                      the injection of additional stylesheets.
+//     2005/06/27  jik  Added SkinTone feature.
+//     2005/07/06  jik  Added group name in the title.
+//     2005/07/15  jik  Added code to style abbr on IE.
+//
+//     2005-11-02  ksc  Added SideBar & removed menu
+//                      Fixed IE detection
+//		2005-11-06	ksc	Changed old menu style in favor of *.PageActions (suggested by MarcSeibert)
+//						Fixed goofed isIE var
+//
+-->
+
+<html>
+    <head>
+        <title>Sotiris Nikoletseas Web Page : Main - Scientific Publications </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <!--HeaderText--><style type='text/css'><!--
+  ul, ol, pre, dl, p { margin-top:0px; margin-bottom:0px; }
+  code.escaped { white-space: nowrap; }
+  .vspace { margin-top:1.33em; }
+  .indent { margin-left:40px; }
+  .outdent { margin-left:40px; text-indent:-40px; }
+  a.createlinktext { text-decoration:none; border-bottom:1px dotted gray; }
+  a.createlink { text-decoration:none; position:relative; top:-0.5em;
+    font-weight:bold; font-size:smaller; border-bottom:none; }
+  img { border:0px; }
+  .editconflict { color:green; 
+  font-style:italic; margin-top:1.33em; margin-bottom:1.33em; }
+
+  table.markup { border:2px dotted #ccf; width:90%; }
+  td.markup1, td.markup2 { padding-left:10px; padding-right:10px; }
+  table.vert td.markup1 { border-bottom:1px solid #ccf; }
+  table.horiz td.markup1 { width:23em; border-right:1px solid #ccf; }
+  table.markup caption { text-align:left; }
+  div.faq p, div.faq pre { margin-left:2em; }
+  div.faq p.question { margin:1em 0 0.75em 0; font-weight:bold; }
+   
+    .frame 
+      { border:1px solid #cccccc; padding:4px; background-color:#f9f9f9; }
+    .lfloat { float:left; margin-right:0.5em; }
+    .rfloat { float:right; margin-left:0.5em; }
+a.varlink { text-decoration:none; }
+
+--></style>  <meta name='robots' content='index,follow' />
+
+        <link rel='stylesheet' title="(NotSo) Simple" href='pub/skins/notsosimple/notsosimple.css' type='text/css' />
+
+		<script type="text/javascript">
+		<!-- //
+		
+		isIE = 0;
+		browser_type = navigator.appName;
+		if (browser_type == "Microsoft Internet Explorer") { 
+			document.write("<link href='pub/skins/notsosimple/notsosimple-ie.css' rel='stylesheet' type='text/css' />"); 
+			isIE = 1;
+		}
+
+        function styleAbbr() {
+            var oldBodyText, newBodyText, reg;
+            if (isIE) {
+                oldBodyText = document.body.innerHTML;
+                reg = /<ABBR([^>]*)>([^<]*)<\/ABBR>/g;
+                newBodyText = oldBodyText.replace(reg, '<ABBR $1><SPAN class=\"abbr\" $1>$2</SPAN></ABBR>');
+                document.body.innerHTML = newBodyText;
+            }
+        }
+
+        window.onload = function(){
+            styleAbbr();
+        };
+
+        // -->
+        </script>
+    </head>
+
+    <body bgcolor="#ffffff">
+	    
+		<div id="header" style="border: 1px none #ccf; 
+			background: url(pub/skins/notsosimple/image/Box-Top-Blue.jpg) no-repeat; " 
+            title='Main &raquo; Scientific Publications was last modified on March 23, 2006, at 02:09 PM'>
+            <table width="100%" style="padding: 0px; margin:0px;">
+                <tr>
+
+                    <td style="padding: 0px; margin:0px; border: none;">
+                        <div id="page-title"><a href='index.html'>Sotiris Nikoletseas Web Page</a></div>
+                        <div id="page-subtitle"><a href='index.html' title='Main Home'>Main</a> :: Scientific Publications</div>
+                    </td>
+                    <td align="right" width="120" 
+                        style="padding: 0px; margin:0px; padding-top: 16px; border: none;">
+                        <center>
+                            <a href="index.html"><img src="pub/skins/pmwiki/pmwiki-32.gif" border="0" /></a>
+
+                        </center>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="main">
+            <div id="menubar" style="display: none;">
+                <div id="wikicmds" align="right">
+
+					<ul><li class='browse'><a accesskey=''  class='selflink' href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.ScientificPublications'>View</a>
+</li><li class='edit'><a accesskey='e'  rel='nofollow'  class='wikilink' href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.ScientificPublications?action=edit'>Edit</a>
+</li><li class='diff'><a accesskey='h'  rel='nofollow'  class='wikilink' href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.ScientificPublications?action=diff'>History</a>
+</li><li class='upload'><a accesskey='ak_attach'  rel='nofollow'  class='wikilink' href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.ScientificPublications?action=upload'>Attach</a>
+</li><li class='print'><a accesskey=''  rel='nofollow'  class='wikilink' href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.ScientificPublications?action=print'>Print</a>
+</li></ul>
+
+                </div>
+                <div class="clearer"></div>
+
+            </div>
+
+            <div class="content-mat">
+                <div id="content">
+                                        <div id='sidebar'><ul><li><a class='selflink' href='indexGr.html'>Home Page</a>
+</li><li><a class='wikilink' href='currentPositionsGr.html'>&#913;&#954;&#945;&#948;&#951;&#956;&#945;&#970;&#954;&#941;&#962; &#921;&#948;&#953;&#972;&#964;&#951;&#964;&#949;&#962;</a>
+</li><li><a class='wikilink' href='researchInterestsGr.html'>&#917;&#961;&#949;&#965;&#957;&#951;&#964;&#953;&#954;&#940; &#917;&#957;&#948;&#953;&#945;&#966;&#941;&#961;&#959;&#957;&#964;&#945;</a>
+</li><li><a class='wikilink' href='scientificPublicationsGr.html'>&#917;&#960;&#953;&#963;&#964;&#951;&#956;&#959;&#957;&#953;&#954;&#941;&#962; &#916;&#951;&#956;&#959;&#963;&#953;&#949;&#973;&#963;&#949;&#953;&#962;</a>
+</li><li><a class='wikilink' href='invitedTalksTutorialsGr.html'>&#928;&#961;&#959;&#963;&#954;&#949;&#954;&#955;&#951;&#956;&#941;&#957;&#949;&#962; &#916;&#953;&#945;&#955;&#941;&#958;&#949;&#953;&#962;</a>
+
+</li><li><a class='wikilink' href='conferenceActivitiesGr.html'>&#916;&#953;&#949;&#952;&#957;&#942; &#931;&#965;&#957;&#941;&#948;&#961;&#953;&#945;</a>
+</li><li><a class='wikilink' href='editorReviewerGr.html'>&#916;&#953;&#949;&#952;&#957;&#942; &#928;&#949;&#961;&#953;&#959;&#948;&#953;&#954;&#940;</a>
+
+</li><li><a class='wikilink' href='teachingGr.html'>&#916;&#953;&#948;&#945;&#963;&#954;&#945;&#955;&#943;&#945;</a>
+</li><li><a class='wikilink' href='studentsGr.html'>&#924;&#949;&#964;&#945;&#960;&#964;&#965;&#967;&#953;&#945;&#954;&#959;&#943; &#934;&#959;&#953;&#964;&#951;&#964;&#941;&#962;</a>
+</li><li><a class='wikilink' href='bookGr.html'>&#914;&#953;&#946;&#955;&#943;&#959;</a>
+</li><li><a class='wikilink' href='researchProjectsGr.html'>&#917;&#961;&#949;&#965;&#957;&#951;&#964;&#953;&#954;&#940; &#904;&#961;&#947;&#945;</a>
+</li><li><a class='wikilink' href='articlesGr.html'>&#902;&#961;&#952;&#961;&#945; &#963;&#949; &#917;&#966;&#951;&#956;&#949;&#961;&#943;&#948;&#949;&#962;</a>
+</li><li><a class='wikilink' href='contactInfoGr.html'>&#931;&#964;&#959;&#953;&#967;&#949;&#943;&#945; &#917;&#960;&#953;&#954;&#959;&#953;&#957;&#969;&#957;&#943;&#945;&#962;</a>
+</li></ul><p class='vspace'></p>
+</div>
+                    <!--PageText-->
+
+<div id='wikitext'>
+<h2>&#917;&#960;&#953;&#963;&#964;&#951;&#956;&#959;&#957;&#953;&#954;&#941;&#962; &#916;&#951;&#956;&#959;&#963;&#953;&#949;&#973;&#963;&#949;&#953;&#962;</h2>
+<p class='vspace'></p><p>(&#948;&#953;&#945;&#952;&#941;&#963;&#953;&#956;&#945; &#963;&#949; <a class='urllink' href='uploads/Main/publications.doc' rel='nofollow'>.doc</a> &#954;&#945;&#953; <a class='urllink' href='uploads/Main/publications.pdf' rel='nofollow'>.pdf</a> format)
+</p>
+<p class='vspace'></p><ul><li><a href='#Books'>&#914;&#953;&#946;&#955;&#943;&#945;</a>
+</li><li><a href='#Editorial'>&#917;&#954;&#948;&#972;&#963;&#949;&#953;&#962;</a>
+</li><li><a href='#BookChapters'>&#922;&#949;&#966;&#940;&#955;&#945;&#953;&#945; &#963;&#949; &#946;&#953;&#946;&#955;&#943;&#945; &#948;&#953;&#949;&#952;&#957;&#959;&#973;&#962; &#954;&#965;&#954;&#955;&#959;&#966;&#959;&#961;&#943;&#945;&#962;</a>
+
+</li><li><a href='#Journals'>&#928;&#949;&#961;&#953;&#959;&#948;&#953;&#954;&#940;</a>
+<!-- </li><li><a href='#InvitedPapers'>Invited papers in Special issues of journals - under review</a> -->
+</li><li><a href='#Refereed'>&#916;&#953;&#949;&#952;&#957;&#942; &#963;&#965;&#957;&#941;&#948;&#961;&#953;&#945; &#956;&#949; &#945;&#957;&#964;&#945;&#947;&#969;&#957;&#953;&#963;&#964;&#953;&#954;&#942; &#954;&#961;&#943;&#963;&#951;</a>
+</li></ul><p class='vspace'></p><p><a name='Books' id='Books'></a>
+</p><h3>&#914;&#953;&#946;&#955;&#943;&#945;</h3>
+<p class='vspace'></p><p><strong>[B1]</strong>S. Nikoletseas and P. Spirakis, "Elements of the Probabilistic Method (Mathematical Foundations of Computer Science)", Vol. I, Gutenberg Editions, 1997.
+</p>
+<p class='vspace'></p><p><a name='Editorial' id='Editorial'></a>
+</p><h3>Editorial Activities</h3>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED17</span>]</strong> Nael Abu-Ghazaleh and Sotiris Nikoletseas, Editors of the Proceedings of the 10th ACM MSWiM (International Symposium on Modeling, Analysis and Simulation of Wireless and Mobile Systems), ACM Press, 2007.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED16</span>]</strong> Luciano Bononi and Sotiris Nikoletseas, Editors of the Special Issue on "Resources and Mobility Management in Wireless Networks" of the Wireless Communications and Mobile Computing (WCMC) Journal, Wiley, 2007.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED15</span>]</strong> Sotiris Nikoletseas, Stephan Olariu and Ioannis Chatzigiannakis, Editors of the Posters/Tools/Demos Proceedings of the 9th ACM MSWiM (International Symposium on Modeling, Analysis and Simulation of Wireless and Mobile Systems), 2006.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED14</span>]</strong> Sotiris Nikoletseas and Jose Rolim, Editors of the Lecture Notes in Computer Science (LNCS) Volume of the Proceedings of the Second International Workshop on Algorithmic Aspects of Wireless Sensor Networks (ALGOSENSORS 06), Springer Verlag, LNCS Volume 4240, 2006.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED13</span>]</strong> Stefan Fischer, Sotiris Nikoletseas and Christian Schindelhauer, Editors of the Proceedings Volume of the Workshops of DCOSS 2006 (the IEEE International Conference on Distributed Computing in Sensor Networks), 2006.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED12</span>]</strong> Sotiris Nikoletseas and Jose Rolim, Editors of the Special Issue of the Theoretical Computer Science (TCS) Journal on "Foundational Aspects of Wireless Sensor Networks", Elsevier, approved, to appear in 2007.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED11</span>]</strong> Sotiris Nikoletseas, Editor of the Special Issue of the ACM Journal of Experimental Algorithmics (JEA) on selected papers of the 4th International Workshop on Efficient and Experimental Algorithms, Section 2, Volume 11, 2006.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED10</span>]</strong> Azzedine Boukerche and Sotiris Nikoletseas, Editors of the Proceedings of the 5th IEEE International Workshop on Algorithms for Wireless, Mobile, Ad Hoc and Sensor Networks (WMAN 05), held in conjunction with IPDPS 2005,  IEEE Press, 2005.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED9</span>]</strong> Sotiris Nikoletseas,  Editor of the Lecture Notes in Computer Science (LNCS) Volume of the Proceedings of the 4th International Workshop on Efficient and Experimental Algorithms (WEA 05), Springer Verlag, LNCS Volume 3503, 2005.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED8</span>]</strong> Sotiris Nikoletseas and Jose Rolim, Editors of the Special Issue of the Theoretical Computer Science (TCS) Journal on "Algorithmic Aspects of Wireless Sensor Networks", Elsevier, Volume 344, Number 1,  2005.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED7</span>]</strong> Ioannis Chatzigiannakis and Sotiris Nikoletseas,  Editors of the Poster Proceedings of the 8th ACM MSWiM 2005 (International Symposium on Modeling, Analysis and Simulation of Wireless and Mobile Systems), Ellinika Grammata and CTI Press, 2005.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED6</span>]</strong> Ioannis Chatzigiannakis, Sotiris Nikoletseas and Viktor Prasanna, Editors of the Poster Proceedings of the IEEE International Conference on Distributed Computing in Sensor Networks (DCOSS), Ellinika Grammata and CTI Press, ISBN 960-442-067-4, 2005.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED5</span>]</strong> Sotiris Nikoletseas and Jose Rolim, Editors  of the Lecture Notes in Computer Science (LNCS) Volume of the Proceedings of the First International Workshop on Algorithmic Aspects of Wireless Sensor Networks (ALGOSENSORS 04), Springer Verlag, LNCS Volume 3121, 2004.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED4</span>]</strong> Ioannis Chatzigiannakis and Sotiris Nikoletseas,  Editors of the Poster Proceedings of the 4th International Workshop on Efficient and Experimental Algorithms (WEA 05), Ellinika Grammata and CTI Press, ISBN 960-442-034-8,   2005.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED3</span>]</strong> Sotiris Nikoletseas, Editor of the Proceedings of the 2nd ACM <span class='wikiword'>MobiWac</span> (International  Workshop on Mobility Management and Wireless Access Protocols), held in conjunction with <span class='wikiword'>MobiCom</span> 2004, ISBN: 1-58113-920-9, ACM Order Number 105045, 2004.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED2</span>]</strong> Sotiris Nikoletseas,  Editor of the Poster Proceedings of the 7th ACM <span class='wikiword'>MSWiM</span> 2004 (International Symposium on Modeling, Analysis and Simulation of Wireless and Mobile Systems), Ellinika Grammata and CTI Press, ISBN 960-406-886-5, 2004.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>ED1</span>]</strong> Achilles Kameas, Sotiris Nikoletseas and Paul Spirakis, Editors of the Proceedings of the International Workshop on Ambient Intelligence Computing (<span class='wikiword'>AmI</span>), Ellinika Grammata and CTI Press, ISBN 960-406-462-2, 2003. 
+</p>
+<p class='vspace'></p><p><a name='BookChapters' id='BookChapters'></a>
+</p><h3>&#922;&#949;&#966;&#940;&#955;&#945;&#953;&#945; &#963;&#949; &#946;&#953;&#946;&#955;&#943;&#945; &#948;&#953;&#949;&#952;&#957;&#959;&#973;&#962; &#954;&#965;&#954;&#955;&#959;&#966;&#959;&#961;&#943;&#945;&#962;</h3>
+
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB12</span>]</strong> A. Boukerche and S. Nikoletseas, "Protocols for Data Propagation in Wireless Sensor Networks: A Survey", Invited Chapter in the Book "Wireless Communications Systems and Networks", Editor Mohsen Guizani, Kluwer Academic Publishers, ISBN: 0306481901, pp. 23 - 51, 2004.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB11</span>]</strong> S. Nikoletseas, «Connectivity and Fault-tolerance in Random Regular Graphs», in the Encyclopaedia of Algorithms, Editor Ming-Yang Kao, Springer Verlag, approved, to appear in 2007. 
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB10</span>]</strong> P. Leone, S. Nikoletseas and J. Rolim, «Randomized Algorithms for Energy Balance in Wireless Sensor Networks», in the Encyclopaedia of Algorithms, Editor Ming-Yang Kao, Springer Verlag, approved, to appear in 2007. 
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB9</span>]</strong> É. Chatzigianakis and S. Nikoletseas, "Combined Data Propagation and Energy Management in Wireless Sensor Networks", Chapter in the Book "Algorithms and Protocols for Wireless Ad hoc and Sensor networks", Wiley&Sons, accepted, to appear in 2007.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB8</span>]</strong> S. Nikoletseas and O. Powell, «Obstacle Avoidance Algorithms in Wireless Sensor Networks», in the Encyclopaedia of Algorithms, Editor Ming-Yang Kao, Springer Verlag, approved, to appear in 2007. 
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB7</span>]</strong> A. Boukerche and S. Nikoletseas, "Energy Efficient Algorithms in Wireless Sensor Networks", Invited Book Chapter, Springer Verlag, accepted, to appear in 2007.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB6</span>]</strong> S. Nikoletseas, «Probabilistic Data Forwarding in Wireless Sensor Networks», in the Encyclopaedia of Algorithms, Editor Ming-Yang Kao, Springer Verlag, approved, to appear in 2007. 
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB5</span>]</strong> S. Nikoletseas and P. Spirakis, "Randomized Approximation Techniques", Invited Chapter in the Handbook "Approximation Algorithms and Metaheuristcs", Chapter 12, pp. 12/1-12/12, Taylor and Francis Books (CRC Press), 2007.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB4</span>]</strong> A. Boukerche and S. Nikoletseas, "Algorithmic Design for Communication in Mobile Adhoc Networks", Invited Chapter in the Book "Performance Tools and Applications to Networked Systems", M. C. Calzarossa and Erol Gelenbe (Eds), Lecture Notes in Computer Science (LNCS) Volume 2965, pp. 235-254, 2004. 
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB3</span>]</strong> S. Nikoletseas and P. Spirakis, "Distributed Algorithms for Some Fundamental Problems in Ad-hoc Mobile Environments", Invited Chapter in the Handbook of Algorithms for Wireless Networking and Mobile Computing, Chapman & Hall/CRC Computer & Information Science Series,  Volume: 8, pp. 121-161, 2005.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB2</span>]</strong> I. Chatzigiannakis, S. Nikoletseas and P. Spirakis, "Distributed Communication Algorithms for Ad-hoc Mobile Networks", Invited Chapter in the Book "Current Trends in Theoretical Computer Science, The Challenge of the New Century, Vol 1: Algorithms and Complexity", edited by G Paun & Rovira I Virgili, World Scientific, ISBN 981-238-966-0, pp. 337 -372, 2004.
+</p>
+<p class='vspace'></p><p><strong>[<span class='wikiword'>CB1</span>]</strong> S. Nikoletseas and P. Spirakis, Chapter titled "Randomized Techniques for Modelling Faults and Achieving Robust Computing", in the "Handbook of Randomized Computing - Volumes I & II (Combinatorial Optimization 9)", Kluwer Academic Publishers, Volume I, pp. 313-339, 2001.
+</p>
+<p class='vspace'></p><p><a name='Journals' id='Journals'></a>
+</p><h3>&#928;&#949;&#961;&#953;&#959;&#948;&#953;&#954;&#940;</h3>
+
+<p class='vspace'></p><p><strong>[J27]</strong> A. Bamis, A. Boukerche, I. Chatzigiannakis and S. Nikoletseas, "A mobility aware protocol synthesis for efficient routing in ad hoc mobile networks", in the Computer Networks Journal, Volume 52,  pp. 130-154, 2008.
+</p>
+<p class='vspace'></p><p><strong>[J26]</strong> I. Chatzigiannakis, A. Kinalis and S. Nikoletseas, "Efficient Data Propagation Strategies in Wireless Sensor Networks Using a Single Mobile Sink», in the Computer Communications (COMCOM) Journal, Elsevier, accepted, to appear in 2007.
+</p>
+<p class='vspace'></p><p><strong>[J25]</strong> S. Nikoletseas and P. Spirakis, "Efficient Sensor Network Design for Continuous Monitoring of Moving Objects", in the Special Issue of the Theoretical Computer Science (TCS) Journal on "Algorithmic Aspects of Wireless Sensor Networks", Elsevier, accepted, to appear in 2008.
+</p>
+<p class='vspace'></p><p><strong>[J24]</strong> I. Chatzigiannakis, G. Mylonas and S. Nikoletseas, "A Model for Obstacles to be used in Simulations of Wireless Sensor Networks and its Application in studying Routing Protocol Performance", in the Journal of Simulation: Transactions of the Society for Modeling and Simulation International, accepted, to appear in 2007.
+</p>
+<p class='vspace'></p><p><strong>[J23]</strong> I. Chatzigiannakis, G. Mylonas and S. Nikoletseas, "The Design of an Environment for Monitoring and Controlling Remote Sensor Networks" in the International Journal of Distributed Sensor Networks (IJDSN), Taylor and Francis, accepted, to appear in 2007.
+</p>
+<p class='vspace'></p><p><strong>[J22]</strong> I. Chatzigiannakis, A. Kinalis and S. Nikoletseas, "Fault-tolerant and Efficient Data Propagation in Wireless Sensor Networks using Local, Additional Network Information», in the Journal of Parallel and Distributed Computing (JPDC), 67: pp. 456-473, 2007.
+</p>
+<p class='vspace'></p><p><strong>[J21]</strong> I. Chatzigiannakis, A. Kinalis and S. Nikoletseas, "Adaptive Energy Management for Incremental Deployment of Heterogeneous Wireless Sensors", invited paper to the Theory of Computing Systems (TOCS) Journal, Special Issue on the Seventeenth (17th) Annual ACM Symposium on Parallelism in Algorithms and Architectures (SPAA), accepted, to appear in 2006.
+</p>
+<p class='vspace'></p><p><strong>[J20]</strong> T. Dimitriou, S. Nikoletseas and P. Spirakis, "The Infection Time of Graphs", invited paper in the Discrete Applied Mathematics (DAM) Journal, accepted, to appear in 2006.
+</p>
+<p class='vspace'></p><p><strong>[J19]</strong> I. Chatzigiannakis, T. Kinalis and S. Nikoletseas, "Adaptive Techniques for Proactive Collision Avoidance for Multi-path Data Propagation in Wireless Sensor Networks", invited paper to the Special Issue on "Performance Evaluation of Wireless Ad Hoc, Sensor, and Ubiquitous Networks" of Elsevier's Performance Evaluation Journal, accepted, to appear in 2006.
+</p>
+<p class='vspace'></p><p><strong>[J18]</strong> C. Efthymiou, S. Nikoletseas and J. Rolim, "Energy Balanced Data Propagation in Wireless Sensor Networks", in the Wireless Networks (WINET) Journal, Special Issue on "Algorithms for Wireless, Mobile, Ad Hoc and Sensor Networks", accepted, appeared as *Article ID*05-NO00006529, Springer
+Verlag, 2006.
+</p>
+<p class='vspace'></p><p><strong>[J17]</strong> A. Boukerche, I. Chatzigiannakis and S. Nikoletseas, "Power Efficient Data Propagation Protocols in Wireless Sensor Networks", in the Special Issue on Advances in Simulation Methodology and Practices for Distributed Systems and Networks of the "Simulation: Transactions of the Society for Modeling and Simulation" (SIMULATION) Journal, 81 (6): pp. 399-411, 2005.
+</p>
+<p class='vspace'></p><p><strong>[J16]</strong> A. Boukerche, I. Chatzigiannakis and S. Nikoletseas, "A New Energy Efficient and Fault-tolerant Protocol for Data Propagation in Smart Dust Networks using Varying Transmission Range", in the Computer Communications (COMCOM) Journal, Elsevier, 81(6): pp. 1-13, 2005.
+
+</p>
+<p class='vspace'></p><p><strong>[J15]</strong> D. Fotakis, S. Nikoletseas, V. Papadopoulou and P. Spirakis,  "Radiocolorings in Planar Graphs: Complexity and Approximations", in the Theoretical Computer Science (TCS) Journal, Special Issue on best papers of the 25th International Symposium on Mathematical Foundations of Computer Science (MFCS),  TCS 340 (2005) 514-538, 2005.
+</p>
+<p class='vspace'></p><p><strong>[J14]</strong> I. Chatzigiannakis, T. Dimitriou, S. Nikoletseas, and P. Spirakis, 
+"A Probabilistic Algorithm for Efficient and Robust Data Propagation in Smart Dust Networks", in the Ad-Hoc Networks Journal, Elsevier, accepted, 2005.
+</p>
+<p class='vspace'></p><p><strong>[J13]</strong> C. Raptopoulos, S. Nikoletseas, and P. Spirakis, "The Existence and Efficient Construction of Large Independent Sets in General Random Intersection Graphs", invited paper in the Theoretical Computer Science (TCS), Special Issue on Algorithmic Aspects of Global Computing, accepted, to appear in 2006.
+</p>
+<p class='vspace'></p><p><strong>[J12]</strong> D. Fotakis, S. Nikoletseas, V. Papadopoulou and P. Spirakis, Â«Radiocolorings in Periodic Planar Graphs: PSPACE-Completeness and Efficient Approximations for the Optimal Range of Frequencies", in the Journal of Discrete Algorithms (JDA), accepted, 2005.
+</p>
+
+<p class='vspace'></p><p><strong>[J11]</strong> D Koukopoulos, M. Mavronicolas, S. Nikoletseas and P. Spirakis, "The Impact of Network Structure on the Stability of Greedy Protocols",  in the Theory of Computing Systems (TOCS) Journal, accepted, xxxxxxxxxx.
+</p>
+<p class='vspace'></p><p><strong>[J10]</strong> I. Chatzigiannakis, P. Spirakis and S. Nikoletseas, "Efficient and Robust Protocols for Local Detection and Propagation in Smart Dust Networks", accepted in the ACM/Baltzer Mobile Networks and Applications (MONET) Journal,  Special Issue on Algorithmic Solutions for Wireless, Mobile, Ad Hoc and Sensor Networks, in MONE 10 (1), pp. 133-149, 2005. 
+</p>
+<p class='vspace'></p><p><strong>[J9]</strong> I. Chatzigiannakis, E. Kaltsa  and S. Nikoletseas, "On the Effect of User Mobility and Density on the Performance of Routing Protocols for Ad-hoc Mobile Networks", in the Journal of Wireless Communications &amp; Mobile Computing (WMC), 4: pp. 1-13, 2004.
+</p>
+<p class='vspace'></p><p><strong>[J8]</strong> I. Chatzigiannakis and S. Nikoletseas, "Design and Analysis of an Efficient Communication Strategy for Hierarchical and Highly Changing Ad-hoc Mobile Networks", In the ACM/Baltzer Journal of Mobile Networks and Applications (MONET) 9 (4): pp. 319-332, 2004, Special Issue on Parallel Processing Issues in Mobile Computing.
+
+</p>
+<p class='vspace'></p><p><strong>[J7]</strong> I. Chatzigiannakis, M. Markou and S. Nikoletseas, "Distributed Circle Formation for Anonymous Oblivious Robots", accepted in the International Journal on Wireless and Mobile Computing (IJWMC), Special Issue on the 2nd International Technology Symposium (<span class='wikiword'>I2TS</span>), Inderscience Publishers, 4 (6):pp. 609-621, 2004. 
+</p>
+<p class='vspace'></p><p><strong>[J6]</strong> I. Chatzigiannakis, T. Dimitriou, M. Mavronicolas, S. Nikoletseas and P. Spirakis, "A Comparative Study of Protocols for Efficient Data Propagation in Smart Dust Networks", in the Parallel Processing Letters (PPL) Journal, Volume 13, Number 4, pp. 615-627, 2003.
+</p>
+<p class='vspace'></p><p><strong>[J5]</strong> I. Chatzigiannakis, S. Nikoletseas and P. Spirakis, "Distributed Communication and Control Algorithms for Ad-hoc Mobile Networks", in the Journal of Parallel and Distributed Computing (JPDC),  Special Issue on Mobile Ad-hoc Networking and Computing,  63 (2003) 58-74, 2003.
+</p>
+<p class='vspace'></p><p><strong>[J4]</strong> S. Nikoletseas, G. Prasinos, P. Spirakis and C. Zaroliagis, "Attack Propagation in Networks", in the Theory of Computing Systems (TOCS) Journal, Special Issue on the Thirteenth (13th) Annual ACM Symposium on Parallel Algorithms and Architectures (SPAA), 36, 553-574, (2003).
+
+</p>
+<p class='vspace'></p><p><strong>[J3]</strong> P. Flajolet, K. Hatzis, S. Nikoletseas and P. Spirakis, "On the Robustness of Interconnections in Random Graphs: A Symbolic Approach", in the Theoretical Computer Science (TCS) Journal, TCS 287 (2002) pp. 515-534. 
+</p>
+<p class='vspace'></p><p><strong>[J2]</strong> D. Fotakis, S. Nikoletseas, V. Papadopoulou and P. Spirakis, "Hardness Results and Efficient Approximations for Frequency Assignment Problems: Radio Labelling and Radio Coloring", in the Journal of Computers and Artificial Intelligence (CAI), Vol. 20 (2), pp. 121-180, 2001.
+</p>
+<p class='vspace'></p><p><strong>[J1]</strong> S. Nikoletseas, K. Palem, P. Spirakis and M. Yung, "Connectivity Properties in Random Regular Graphs with Edge Faults", in the Special Issue on Randomized Computing of the International Journal of Foundations of Computer Science (IJFCS), Vol. 11 No. 2 (2000), pp. 247-262, World Scientific Publishing Company,  2000. 
+</p>
+<p class='vspace'></p><p><a name='InvitedPapers' id='InvitedPapers'></a>
+</p>
+<!--
+//<h3>Invited Papers in Special Issues of Journals - under review</h3>
+//<p class='vspace'></p><p><strong>[J23]</strong> A. Boukerche and S. Nikoletseas, "Communication Algorithms in Mobile Ad hoc Networks", invited paper in the IEEE Networks Journal, 2005.
+//
+//</p>
+//<p class='vspace'></p><p><strong>[J22]</strong> T. Dimitriou, S. Nikoletseas and P. Spirakis, Â«The Infection Time of GraphsÂ», invited paper in the Discrete Applied Mathematics (DAM) Journal, 2005.
+//</p>
+//<p class='vspace'></p><p><strong>[J21]</strong> J. Diaz, D. Koukopoulos, S.Nikoletseas, M.Serna, P.Spirakis and D. Thilikos, "Stability and non-stability of the FIFO protocol", invited paper in the Theoretical Computer Science (TCS) Journal.
+//</p>
+-->
+<p class='vspace'></p><p><a name='Refereed' id='Refereed'></a>
+</p><h3>Refereed Conferences</h3>
+<p class='vspace'></p><p><strong>[C67]</strong>  L. Moraru, P. Leone, S. Nikoletseas and J. Rolim, "Near optimal geographic routing with obstacle avoidance in wireless sensor networks by fast-converging trust-based algorithms", in the Proceedings of the 3rd ACM International Workshop on QoS and Security for Wireless and Mobile Networks, pp. 31-38, 2007.
+</p>
+<p class='vspace'></p><p><strong>[C66]</strong>  I. Chatzigiannakis, A. Kinalis, S. Nikoletseas and J. Rolim, "Fast and Energy Efficient Sensor Data Collection by Multiple Mobile Sinks", in the Proceedings of the 5th ACM/IEEE International  Workshop on Mobility Management and Wireless Access Protocols (MobiWac), ACM Press, pp. 25-32, 2007.
+</p>
+<p class='vspace'></p><p><strong>[C65]</strong>  I. Chatzigiannakis, G. Mylonas and S. Nikoletseas, "50 Ways to Build your Application: A Survey of Middleware and Systems for Wireless Sensor Networks", in the Proc. 12th IEEE Conference on Emerging Technologies and Factory Automation, pp. 466-473, 2007.
+</p>
+<p class='vspace'></p><p><strong>[C64]</strong>  S. Nikoletseas and P. Spirakis, "Efficient Sensor Network Design for Continuous Monitoring of Moving Objects", in the Proceedings of the Third International Workshop on Algorithmic Aspects of Wireless Sensor Networks (ALGOSENSORS 07), Springer Verlag, Lecture Notes in Computer Science (LNCS), Volume 4837, pp. 18-31, 2008.
+</p>
+<p class='vspace'></p><p><strong>[C63]</strong>  A. Antoniou, I. Chatzigiannakis, A. Kinalis, G. Mylonas, S. Nikoletseas and A. Papageorgiou, "A Peer-to-Peer Environment for Monitoring Multiple Wireless Sensor Networks", poster paper at the 10th ACM/IEEE International Symposium on Modeling, Analysis and Simulation of Wireless and Mobile Systems, ACM Press, pp. 132-135, 2007.
+</p>
+<p class='vspace'></p><p><strong>[C62]</strong>  S. Nikoletseas and P. Spirakis, "The Second Eigenvalue of Random Walks on Symmetric Random Intersection Graphs", in the Proceedings of the 2nd International Conference on Algebraic Informatics (CAI 2007), Lecture Notes in Computer Science (LNCS), Volume xxx, pp. xxxx, Springer Verlag, accepted, to appear, 2007.
+</p>
+<p class='vspace'></p><p><strong>[C61]</strong>  S. Nikoletseas and O. Powell, "Simple and Efficient Geographic Routing around Obstacles for Wireless Sensor Networks", in the Proceedings of the 6th International Workshop on Efficient and Experimental Algorithms (WEA), Lecture Notes in Computer Science (LNCS), Volume 4525, pp. 161-174, Springer Verlag, 2007.
+</p>
+<p class='vspace'></p><p><strong>[C60]</strong>  S. Nikoletseas, C. Raptopoulos, and P. Spirakis, "Expander Properties and the Cover Time of Random Intersection Graphs", in the Proceedings of the 32nd International Symposium on Mathematical Foundations of Computer Science (MFCS), Lecture Notes in Computer Science (LNCS), Volume 4708, pp. 44-55, Springer Verlag, 2007.
+</p>
+<p class='vspace'></p><p><strong>[C59]</strong>  A. Kinalis and S. Nikoletseas, "Scalable Data Collection Protocols for Wireless Sensor Networks with Multiple Mobile Sinks", In the  Proc. of the 40th Annual ACM/IEEE Simulation Symposium (ANSS 07), IEEE Computer Society Press, pp. 60-69, 2007.
+</p>
+<p class='vspace'></p><p><strong>[C58]</strong>  S. Nikoletseas, C. Raptopoulos and P. Spirakis, "The survival of the weakest in networks", in the Proceedings of the Fourth Workshop on Approximation and Online Algorithms (WAOA), Lecture Notes in Computer Science (LNCS), Springer Verlag, pp. 316-329, 2006.
+</p>
+<p class='vspace'></p><p><strong>[C57]</strong>  A. Bamis, A. Boukerche, I. Chatzigiannakis and S. Nikoletseas, "A Mobility Sensitive Approach for Efficient Routing in Ad Hoc Mobile Networks", in the Proceedings of the 9th ACM/IEEE International Symposium on Modeling, Analysis and Simulation of Wireless and Mobile Systems (MSWIM), ACM Press, pp. 357-364, 2006.
+</p>
+<p class='vspace'></p><p><strong>[C56]</strong>  I. Chatzigiannakis, A. Kinalis and S. Nikoletseas, "Sink Mobility Protocols for Data Collection in Wireless Sensor Networks", in the Proceedings of the 4th ACM/IEEE International  Workshop on Mobility Management and Wireless Access Protocols (MobiWac), ACM Press, pp. 52-59, 2006.
+</p>
+<p class='vspace'></p><p><strong>[C55]</strong>  I. Chatzigiannakis, A. Kinalis and S. Nikoletseas, "Priority Based Adaptive Coordination of Wireless Sensors and Actors", in the Proceedings of the 2nd ACM International Workshop on QoS and Security for Wireless Networks (Q2SWinet), ACM Press, pp. 37-44, 2006. 
+</p>
+<p class='vspace'></p><p><strong>[C54]</strong> I. Chatzigiannakis, A. Kinalis and S. Nikoletseas, "Efficient and Robust Data Dissemination using Limited Extra Network Knowledge", in the Proceedings of the IEEE International Conference on Distributed Computing in Sensor Networks (DCOSS), Lecture Notes in Computer Science (LNCS), Springer Verlag, 2006.
+</p>
+<p class='vspace'></p><p><strong>[C53]</strong> I. Chatzigiannakis, G. Mylonas and S. Nikoletseas, "Modeling and Evaluation of the Effect of Obstacles on the Performance of Wireless Sensor Networks", accepted, to appear in the Proc. 39th Annual ACM/IEEE Simulation Symposium (ANSS 06), IEEE Computer Society Press, 2006.
+</p>
+<p class='vspace'></p><p><strong>[C52]</strong> I. Chatzigiannakis, A. Kinalis and S. Nikoletseas, "An Adaptive Power Conservation Scheme for Heterogeneous Wireless Sensors",  in the Proceedings of the Seventeenth (17th) Annual ACM Symposium on Parallel Algorithms and Architectures (SPAA 2005), ACM Press,  pp. 96-105, 2005.
+</p>
+<p class='vspace'></p><p><strong>[C51]</strong> I. Chatzigiannakis and S. Nikoletseas, "A Forward Planning Situated Protocol for Data Propagation in Wireless Sensor Networks based on Swarm Intelligence Techniques", short paper, in the Proceedings of the Seventeenth (17th) Annual ACM Symposium on Parallel Algorithms and Architectures (SPAA 2005), ACM Press,  pp. 214, 2005.
+</p>
+<p class='vspace'></p><p><strong>[C50]</strong> S. Nikoletseas, "Power-Aware Data Dissemination Protocols for Wireless Sensor Networks", invited paper,  in the Proceedings of the 14th International Workshop on Parallel and Distributed Real-time Systems (WPDRTS), held in conjunction with IPDPS 2006.
+</p>
+<p class='vspace'></p><p><strong>[C49]</strong> P. Leone, J. Rolim and S. Nikoletseas, "An Adaptive Blind Algorithm for Energy Balanced Data Propagation in Wireless Sensor Networks", in the Proceedings of the IEEE International Conference on Distributed Computing in Sensor Networks (DCOSS), Lecture Notes in Computer Science (LNCS), Springer Verlag, Volume 3267, pp. 35-48, 2005.
+</p>
+<p class='vspace'></p><p><strong>[C48]</strong> I. Chatzigiannakis, G. Mylonas and S. Nikoletseas, "jWebDust: A Java-based Generic Application Environment for Wireless Sensor Networks", in the Proceedings of the IEEE International Conference on Distributed Computing in Sensor Networks (DCOSS), Lecture Notes in Computer Science (LNCS), Springer Verlag, Volume 3267, pp. 376-386, 2005.
+</p>
+
+<p class='vspace'></p><p><strong>[C47]</strong> S. Nikoletseas, "Models and Algorithms for Wireless Sensor Networks (Smart Dust)", invited paper in the Proceedings of the 32nd SOFSEM Conference on "Current Trends in Theory and Practice of Computer Science", Lecture Notes in Computer Science (LNCS), Springer Verlag,, Volume 3831, pp. 64-83, 2006.
+</p>
+<p class='vspace'></p><p><strong>[C46]</strong> I. Chatzigiannakis, S. Nikoletseas and P. Spirakis, "Distributed Algorithms for Data Propagation in Deeply Networked Wireless Sensor Devices", in the Proceedings of the European Conference on Complex Systems (ECSS), xxxxx, 2005.
+</p>
+<p class='vspace'></p><p><strong>[C45]</strong> I. Chatzigiannakis, E. Kaltsa  and S. Nikoletseas, "On the Effect of User Mobility and Density on the Performance of Protocols for Ad hoc Mobile Networks",
+in the Proceedings of the IEEE International Conference on Networks (<span class='wikiword'>ICON2004</span>), pp. 336 - 343, 2004.
+</p>
+<p class='vspace'></p><p><strong>[C44]</strong> I. Chatzigiannakis, A. Kinalis and S. Nikoletseas, "Power Conservation Schemes for Energy Efficient Data Propagation in Heterogeneous Wireless Sensor Networks", In the  Proc. of the 38th Annual ACM/IEEE Simulation Symposium (ANSS 05), IEEE Computer Society Press, pp. 60-71, 2005.
+
+</p>
+<p class='vspace'></p><p><strong>[C43]</strong> I. Chatzigiannakis, T. Kinalis and S. Nikoletseas, "Wireless Sensor Networks Protocols for Efficient Collision Avoidance in Multi-path Data Propagation", in the Proceedings of the ACM Workshop on Performance Evaluation of Wireless Ad Hoc, Sensor, and Ubiquitous Networks (PE-WASUN 2004), pp. 8-16, held in conjunction with ACM <span class='wikiword'>MSWiM</span> 2004, 2004.
+</p>
+<p class='vspace'></p><p><strong>[C42]</strong> S. Nikoletseas and P. Spirakis, "Efficient Smart Dust Protocols", in the Proceedings of Revised Selected Papers of the International Workshop on Global Computing (GC 2004), Lecture Notes in Computer Science (LNCS), Springer Verlag, Volume 3267, pp. 127-145, 2004.
+</p>
+<p class='vspace'></p><p><strong>[C41]</strong> C. Raptopoulos, S. Nikoletseas, and P. Spirakis, "The Existence and Efficient Construction of Large Independent Sets in General Random Intersection Graphs", in the Proceedings of the 31st International Colloquium on Automata, Languages and Programming (ICALP), Lecture Notes in Computer Science (Springer Verlag), pp 1029 - 1040, 2004.
+</p>
+<p class='vspace'></p><p><strong>[C40]</strong> I. Chatzigiannakis, M. Markou and S. Nikoletseas, "Distributed Circle Formation for Anonymous Oblivious Robots", in the Proceedings of the 3nd International Workshop on Efficient and Experimental Algorithms (WEA), Lecture Notes in Computer Science (LNCS), Springer Verlag, Volume 3059, pp. 159-174, 2004.
+
+</p>
+<p class='vspace'></p><p><strong>[C39]</strong> C. Efthymiou, S. Nikoletseas and J. Rolim, "Energy Balanced Data Propagation in Wireless Sensor Networks". In Proc. 4th International Workshop on Algorithms for Wireless, Mobile, Ad-Hoc and Sensor Networks (WMAN '04), IPDPS 2004, IEEE Computer Society Press, 2004.
+</p>
+<p class='vspace'></p><p><strong>[C38]</strong> S. Nikoletseas, I. Chatzigiannakis, A. Antoniou, C. Efthymiou, A. Kinalis and G. Mylonas, "Energy Efficient Protocols for Sensing Multiple Events in Smart Dust Networks". In Proc. 37th Annual ACM/IEEE Simulation Symposium (ANSS'04), IEEE Computer Society Press, pp. 15 -24, 2004.
+</p>
+<p class='vspace'></p><p><strong>[C37]</strong> T. Antoniou, A. Boukerche, I.Chatzigiannakis, S. Nikoletseas and G.Mylonas,
+"A New Energy Efficient and Fault-tolerant Protocol for Data Propagation in Smart Dust Networks". In Proc. 37th Annual ACM/IEEE Simulation Symposium (ANSS'04), IEEE Computer Society Press, pp. 43 - 52, 2004.
+</p>
+<p class='vspace'></p><p><strong>[C36]</strong> I. Chatzigiannakis, T. Dimitriou, M. Mavronicolas, S. Nikoletseas and P. Spirakis, "A Comparative Study of Protocols for Efficient Data Propagation in Smart Dust Networks", in the Proceedings of the 9th European Symposium on Parallel Processing (<span class='wikiword'>EuroPar</span>),  Distinguished Paper (one of the 4 distinguished papers among 338 submitted and 159 accepted papers,  Lecture Notes in Computer Science Vol. 2790 (Springer Verlag), pp. 1003-1016, 2003. 
+
+</p>
+<p class='vspace'></p><p><strong>[C35]</strong> T. Dimitriou, S. Nikoletseas and P. Spirakis, "Analysis of the Information Propagation Time among Mobile Hosts", in the Proceedings of the 3rd International Conference on AD-HOC Networks &amp; Wireless Networks (ADHOC-NOW), Lecture Notes in Computer Science (LNCS), Springer Verlag, pp. 122 - 134, 2004.
+</p>
+<p class='vspace'></p><p><strong>[C34]</strong> I. Chatzigiannakis, T. Dimitriou, S. Nikoletseas, and P. Spirakis, 
+"A Probabilistic Algorithm for Efficient and Robust Data Propagation in Smart Dust Networks", in the Proceedings of the 5th European Wireless Conference on Mobile and Wireless Systems beyond 3G (EW 2004), pp. 344-350, 2004.
+</p>
+<p class='vspace'></p><p><strong>[C33]</strong> D. Fotakis, S. Nikoletseas, V. Papadopoulou and P. Spirakis. 
+"Radiocolorings in Periodic Planar Graphs: PSPACE-Completeness and Efficient Approximations for the Optimal Number of Frequencies", In Proc. 1st International Conference "From Scientific Computing to Computational Engineering (IC-SCCE)", Athens, Greece, pp. xxxxxxxxxx, 2004.
+</p>
+<p class='vspace'></p><p><strong>[C32]</strong> P. Triantafillou, N. Ntarmos, S. Nikoletseas, and P. Spirakis, "<span class='wikiword'>NanoPeer</span> Networks and <span class='wikiword'>P2P</span> Worlds", In Proc. 3rd IEEE International Conference on Peer-to-Peer Computing (<span class='wikiword'>P2P</span> 2003), pp. 40 - 46, September 2003. 
+
+</p>
+<p class='vspace'></p><p><strong>[C31]</strong> S. Nikoletseas, V. Papadopoulou, and P. Spirakis, "Radiocoloring Graphs via the Probabilistic Method, In Proc. of the 4th Panhellenic Logic Symposium 2003, pp. 135-140, 2003.
+</p>
+<p class='vspace'></p><p><strong>[C30]</strong> M. Andreou, S. Nikoletseas and P. Spirakis, "Algorithms and Experiments on Colouring Squares of Planar Graphs", in the Proceedings of the 2nd International Workshop on Efficient and Experimental Algorithms (WEA), Lecture Notes in Computer Science (LNCS), Volume 2647, pp. 15-32, Springer Verlag 2003.
+</p>
+<p class='vspace'></p><p><strong>[C29]</strong> D. Koukopoulos, M. Mavronikolas, S. Nikoletseas and P. Spirakis, "The Impact of Network Structure on the Stability of Greedy Protocols",  in the Proceedings of the 5th Conference on Algorithms and Complexity (CIAC), Lecture Notes in Computer Science (LNCS), Volume 2653, pp. 251-263, Springer Verlag, 2003.
+</p>
+<p class='vspace'></p><p><strong>[C28]</strong> I. Chatzigiannakis and S. Nikoletseas, "A Sleep-Awake  Protocol for Information Propagation in Smart Dust Networks", in the Proceedings of the 3rd International IEEE Workshop on Mobile and Ad-hoc Networks (WMAN), held in conjunction with IPDPS 03, IEEE Press, 2003.
+</p>
+
+<p class='vspace'></p><p><strong>[C27]</strong> S. Nikoletseas, "Efficient Propagation Protocols in Smart Dust Networks", invited paper, in the Proceedings of the International Information Technology Symposium (<span class='wikiword'>I2TS</span>), 2002.
+</p>
+<p class='vspace'></p><p><strong>[C26]</strong> I. Chatzigiannakis, S. Nikoletseas and P. Spirakis, "Smart Dust Protocols for Local Detection and Propagation", in the Proceedings of the 2nd ACM Workshop on Principles of Mobile Computing (POMC), ACM Press, pp. 9-16, 2002. 
+</p>
+<p class='vspace'></p><p><strong>[C25]</strong> D. Koukopoulos, M. Mavronikolas, S. Nikoletseas and P. Spirakis , "On the Stability of Compositions of Universally Stable, Greedy Contention-Resolution Protocols",  in the Proceedings of the 16th International Symposium on Distributed Computing (DISC), Lecture Notes in Computer Science (LNCS), Volume 2508, pp. 88-102, Springer Verlag 2002.
+</p>
+<p class='vspace'></p><p><strong>[C24]</strong> M. Andreou, D. Fotakis, S. Nikoletseas, V. Papadopoulou and P. Spirakis, "On Radiocoloring Hierarchically Specified Planar Graphs: PSPACE-completeness and Approximations", in the Proceedings of the 27th International Symposium on Mathematical Foundations of Computer Science (MFCS), Lecture Notes in Computer Science (LNCS), Volume 2420, pp. 81-92, Springer Verlag, 2002.
+
+</p>
+<p class='vspace'></p><p><strong>[C23]</strong> D. Fotakis,  S. Nikoletseas, V. Papadopoulou and P. Spirakis, "Radiocolorings in Periodic Planar Graphs: PSPACE-Copleteness and Efficient Approximations for the Optimal Range of Frequencies", in the Proceedings of the 28th International Workshop on Graph-Theoretic Concepts in Computer Science, Lecture Notes in Computer Science (LNCS), Volume 2573, pp. 223-234 , 2002.
+</p>
+<p class='vspace'></p><p><strong>[C22]</strong> I. Chatzigiannakis and S. Nikoletseas, "An Adaptive Compulsory Protocol for Basic Communication  in Highly Changing Ad-hoc Mobile Networks", in the Proceedings of the 2nd International Workshop on Parallel and Distributed Computing Issues in Wireless Networks and Mobile Computing, IPDPS 2002 WORKSHOPS, IEEE Computer Society Publications, 2002.
+</p>
+<p class='vspace'></p><p><strong>[C21]</strong> I. Chatzigiannakis, S. Nikoletseas and P. Spirakis, "Analysis of an Innovative and Efficient Communication Strategy for Hierarchical Ad-hoc Mobile Networks", in the Proceedings of the 8th Pan-Hellenic Conference on Informatics, Vol. 2, pp. 10-19, 2001. 
+</p>
+<p class='vspace'></p><p><strong>[C20]</strong>  D. Koukopoulos, S. Nikoletseas and P. Spirakis, "Stability Results of FIFO Networks in the Adversarial Queuing Model", in the Proceedings of the 8th Pan-Hellenic Conference on Informatics, Vol. 2, pp. 30-39,  2001. Also, in Springer Verlag LNCS Proceedings on Selected Papers of HCI 01.
+</p>
+
+<p class='vspace'></p><p><strong>[C19]</strong> I. Chatzigiannakis, S. Nikoletseas and P. Spirakis, "An Efficient Communication Strategy for Ad-hoc Mobile Networks", in the Proceedings of the 15th International Symposium on Distributed Computing (DISC 2001), Lecture Notes in Computer Science Vol. 2180, Springer Verlag, pp. 285-299, 2001. 
+</p>
+<p class='vspace'></p><p><strong>[C18]</strong> S. Nikoletseas, G. Prasinos, P. Spirakis and C. Zaroliagis, "Attack Propagation in Networks", in the Thirteenth (13th) Annual ACM Symposium on Parallel Algorithms and Architectures (SPAA 2001), ACM Press, pp. 67-76, 2001.
+</p>
+<p class='vspace'></p><p><strong>[C17]</strong> J. Diaz, D. Koukopoulos, S.Nikoletseas, M.Serna, P.Spirakis and D. Thilikos "Stability and non-stability of the FIFO protocol", in the Thirteenth (13th) Annual ACM Symposium on Parallel Algorithms and Architectures (SPAA 2001), ACM Press, pp. 48-52, 2001.   
+</p>
+<p class='vspace'></p><p><strong>[C16]</strong> I. Chatzigiannakis, S. Nikoletseas and P. Spirakis, "Self-Organizing Ad-Hoc Mobile Networks: The problem of end-to-end communication", short paper in the Proceedings of the Twentieth (20th) ACM Symposium on Principles of Distributed Computing (PODC 2001), ACM Press, pp. 320-322, 2001. 
+</p>
+<p class='vspace'></p><p><strong>[C15]</strong> S. Nikoletseas and P. Spirakis, "Dynamic Bandwidth Allocation: Lower Bounds on Latency for a Class of Randomized Single Servers", in the Proceedings of the 2nd International Workshop on Approximation and Randomized Algorithms in Communication Networks (ARACNE 2001), ISBN 1-894145-11-9, Carleton Scientific, Proceedings in Informatics, Vol. 12, pp. 85-96, 2001.
+
+</p>
+<p class='vspace'></p><p><strong>[C14]</strong> I. Chatzigiannakis, S. Nikoletseas and P. Spirakis, "On the Average and Worst-case Efficiency of Some New Distributed Communication and Control Algorithms for Ad-hoc Mobile Networks", invited paper, in the Proceedings of the 1st ACM Workshop on Principles of Mobile Computing (POMC), pp. 1-19,  2001. 
+</p>
+<p class='vspace'></p><p><strong>[C13]</strong> D. Koukopoulos, S.Nikoletseas and P.Spirakis, "Instability of FIFO and of Mixings of Stable Policies for Networks", invited paper, in the Proceedings of the 8th International Conference on High Performance Computing (<span class='wikiword'>HiPC</span> 2001), pp. 1-10, 2001. 
+</p>
+<p class='vspace'></p><p><strong>[C12]</strong> I. Chatzigiannakis, S. Nikoletseas, N. Paspallis, P. Spirakis and C. Zaroliagis, "An Experimental Study of Basic Communication Protocols in Ad-hoc Mobile Networks", in the Proceedings of the 5th International Workshop on Algorithmic Engineering (WAE 2001), Lecture Notes in Computer Science Vol. 2141 (Springer Verlag), pp. 368-380, 2001. 
+</p>
+<p class='vspace'></p><p><strong>[C11]</strong> D. Fotakis, S. Nikoletseas, V. Papadopoulou and P. Spirakis, "NP-Completeness Results and Efficient Approximations for Radiocoloring in Planar Graphs", in the Proceedings of the 25th International Symposium on Mathematical Foundations of Computer Science (MFCS 2000), Lecture Notes in Computer Science Vol. 1893 (Springer Verlag), pp. 363-372, 2000. 
+
+</p>
+<p class='vspace'></p><p><strong>[C10]</strong> I. Chatzigiannakis, S. Nikoletseas and P. Spirakis, "An Efficient Routing Protocol for Hierarchical Ad-hoc Mobile Networks", in the Proceedings of the 1st International Workshop on Parallel and Distributed Computing Issues in Wireless Networks and Mobile Computing, IPDPS 2001 WORKSHOPS, IEEE Computer Society Publications, 2001. 
+</p>
+<p class='vspace'></p><p><strong>[C9]</strong> I. Chatzigiannakis, S. Nikoletseas and P. Spirakis, "Analysis and Experimental Evaluation of an Innovative Routing Approach for Ad-hoc Mobile Networks", in the Proceedings of the 4th International Workshop on Algorithm Engineering (WAE), Lecture Notes in Computer Science Vol. 2141 (Springer Verlag), pp. 159-171, 2000.
+</p>
+<p class='vspace'></p><p><strong>[C8]</strong> P. Flajolet, K. Hatzis, S. Nikoletseas and P. Spirakis, "Trade-offs between Density and Robustness in Random Interconnection Graphs", Proceedings of the IFIP International Conference on Theoretical Computer Science (IFIP TCS 2000), Lecture Notes in Computer Science Vol. 1872 (Springer Verlag), pp. 152-168, 2000. 
+</p>
+<p class='vspace'></p><p><strong>[C7]</strong> S. Nikoletseas and P. Spirakis, "Efficient Communication Establishment in Adverse Communication Environments", Proceedings of the ICALP Satellite Workshop on Approximation and Randomized Algorithms in Communication Networks (ARACNE 2000), pp. 215-226, Carleton Scientific, Proceedings in Informatics 8, 2000. 
+</p>
+
+<p class='vspace'></p><p><strong>[C6]</strong> S. Nikoletseas, P. Spirakis and M. Yung, "New Random Graph Models and Techniques: Connectivity and Expander Properties in Random Regular Graphs with Edge Faults", in the Proceedings of the Conference on Paul Erdos and his Mathematics, Janos Bolyai Mathematical Society, pp. 187-192, 1999. 
+</p>
+<p class='vspace'></p><p><strong>[C5]</strong> S. Nikoletseas, G. Pantziou, P. Psycharis and P. Spirakis, "On the Fault Tolerance of Fat-Trees", in the Proceedings of the 4th European Symposium on Parallel Processing (<span class='wikiword'>EuroPar</span>), Lecture Notes in Computer Science Vol. 1300 (Springer Verlag), pp. 208-217, 1997. 
+</p>
+<p class='vspace'></p><p><strong>[C4]</strong> S. Nikoletseas and P. Spirakis, "Expander Properties in Random Regular Graphs with Edge Faults", in the Proceedings of the 12th Annual Symposium on Theoretical Aspects of Computer Science (STACS), Lecture Notes in Computer Science Vol. 900 (Springer Verlag), pp. 421-432,1995. 
+</p>
+<p class='vspace'></p><p><strong>[C3]</strong> S. Nikoletseas, J. Reif, P. Spirakis and M. Yung, "Stochastic Graphs Have Short Memory: Fully Dynamic Connectivity in Polylogarithmic Expected Time", in the Proceedings of the 22nd International Colloquium on Automata, Languages and Programming (ICALP), Lecture Notes in Computer Science Vol. 944 (Springer Verlag), pp. 159-170, 1995. 
+
+</p>
+<p class='vspace'></p><p><strong>[C2]</strong> S. Nikoletseas, K. Palem, P. Spirakis and M. Yung, "Short Vertex Disjoint Paths and Multiconnectivity in Random Graphs: Reliable Network Computing" , in the Proceedings of the 21st International Colloquium on Automata, Languages and Programming (ICALP), Lecture Notes in Computer Science Vol. 820 (Springer Verlag), pp. 508-519, 1994. 
+</p>
+<p class='vspace'></p><p><strong>[C1]</strong> S. Nikoletseas and P. Spirakis, "Near-Optimal Dominating Sets in Dense Random Graphs in Polynomial Expected Time", in the Proceedings of the 19th International Workshop on Graph-Theoretic Concepts in Computer Science (WG), Lecture Notes in Computer Science Vol. 790 (Springer Verlag), pp. 1-10, 1993. 
+</p>
+</div>
+                </div>
+                <div class="clearer"></div>
+            </div>
+
+        </div>
+
+        <div id="footer">
+            <div id="copyright">
+                <span style="float: left; padding-left: 20px;">
+                    &copy; 2008
+                </span>
+                <span style="float: right; display: block; padding-right: 20px;">
+                <a href="index.html"><img src="ukflagup.gif"></a>
+                    <span id='sitepoweredby' title='Powered by PmWiki'>
+
+    Powered by <a href='http://www.pmichaud.com/wiki/PmWiki/PmWiki' title='PmWiki Home'>PmWiki</a>
+</span>
+                </span>
+            </div>
+        </div>
+
+    </body>
+</html>
+

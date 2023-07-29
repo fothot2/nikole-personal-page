@@ -1,0 +1,403 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!--
+
+//
+// Copyright (C) Julian I. Kamil <julian.kamil@gmail.com>
+// No warranty is provided.  Use at your own risk.
+//
+// Commercial support is available through ESV Media Group
+// who can be reached at: http://www.ESV-i.com/.
+//
+// Name: simple.tmpl
+// Author: Julian I. Kamil <julian.kamil@gmail.com>
+// Created: 2005-05-18
+// Description:
+//     This is a simple skin for PmWiki. Please see:
+//         http://www.madhckr.com/project/PmWiki/SimpleSkin
+//     for a live example and doumentation.
+//
+// $Id: simple.tmpl,v 1.1 2005/08/17 19:24:54 julian Exp $
+//
+// History:
+//     2005-05-18  jik  Created.
+//     2005-06-21  jik  Added the directive that enables
+//                      the injection of additional stylesheets.
+//     2005/06/27  jik  Added SkinTone feature.
+//     2005/07/06  jik  Added group name in the title.
+//     2005/07/15  jik  Added code to style abbr on IE.
+//
+//     2005-11-02  ksc  Added SideBar & removed menu
+//                      Fixed IE detection
+//		2005-11-06	ksc	Changed old menu style in favor of *.PageActions (suggested by MarcSeibert)
+//						Fixed goofed isIE var
+//
+-->
+
+<html>
+
+<head>
+    <title>Sotiris Nikoletseas Web Page : Main - Invited Talks Tutorials </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <!--HeaderText-->
+    <style type='text/css'>
+        <!--
+        ul,
+        ol,
+        pre,
+        dl,
+        p {
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+
+        code.escaped {
+            white-space: nowrap;
+        }
+
+        .vspace {
+            margin-top: 1.33em;
+        }
+
+        .indent {
+            margin-left: 40px;
+        }
+
+        .outdent {
+            margin-left: 40px;
+            text-indent: -40px;
+        }
+
+        a.createlinktext {
+            text-decoration: none;
+            border-bottom: 1px dotted gray;
+        }
+
+        a.createlink {
+            text-decoration: none;
+            position: relative;
+            top: -0.5em;
+            font-weight: bold;
+            font-size: smaller;
+            border-bottom: none;
+        }
+
+        img {
+            border: 0px;
+        }
+
+        .editconflict {
+            color: green;
+            font-style: italic;
+            margin-top: 1.33em;
+            margin-bottom: 1.33em;
+        }
+
+        table.markup {
+            border: 2px dotted #ccf;
+            width: 90%;
+        }
+
+        td.markup1,
+        td.markup2 {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        table.vert td.markup1 {
+            border-bottom: 1px solid #ccf;
+        }
+
+        table.horiz td.markup1 {
+            width: 23em;
+            border-right: 1px solid #ccf;
+        }
+
+        table.markup caption {
+            text-align: left;
+        }
+
+        div.faq p,
+        div.faq pre {
+            margin-left: 2em;
+        }
+
+        div.faq p.question {
+            margin: 1em 0 0.75em 0;
+            font-weight: bold;
+        }
+
+        .frame {
+            border: 1px solid #cccccc;
+            padding: 4px;
+            background-color: #f9f9f9;
+        }
+
+        .lfloat {
+            float: left;
+            margin-right: 0.5em;
+        }
+
+        .rfloat {
+            float: right;
+            margin-left: 0.5em;
+        }
+
+        a.varlink {
+            text-decoration: none;
+        }
+        -->
+    </style>
+    <meta name='robots' content='index,follow' />
+
+    <link rel='stylesheet' title="(NotSo) Simple" href='pub/skins/notsosimple/notsosimple.css' type='text/css' />
+
+    <script type="text/javascript">
+        <!-- //
+
+        isIE = 0;
+        browser_type = navigator.appName;
+        if (browser_type == "Microsoft Internet Explorer") {
+            document.write("<link href='pub/skins/notsosimple/notsosimple-ie.css' rel='stylesheet' type='text/css' />");
+            isIE = 1;
+        }
+
+        function styleAbbr() {
+            var oldBodyText, newBodyText, reg;
+            if (isIE) {
+                oldBodyText = document.body.innerHTML;
+                reg = /<ABBR([^>]*)>([^<]*)<\/ABBR>/g;
+                newBodyText = oldBodyText.replace(reg, '<ABBR $1><SPAN class=\"abbr\" $1>$2</SPAN></ABBR>');
+                document.body.innerHTML = newBodyText;
+            }
+        }
+
+        window.onload = function(){
+            styleAbbr();
+        };
+
+        // -->
+    </script>
+</head>
+
+<body bgcolor="#ffffff">
+
+    <div id="header" style="border: 1px none #ccf;
+			background: url(pub/skins/notsosimple/image/Box-Top-Blue.jpg) no-repeat; "
+        title='Main &raquo; Invited Talks Tutorials was last modified on March 23, 2006, at 02:12 PM'>
+        <table width="100%" style="padding: 0px; margin:0px;">
+            <tr>
+
+                <td style="padding: 0px; margin:0px; border: none;">
+                    <div id="page-title"><a href='index.html'>Sotiris Nikoletseas Web Page</a></div>
+                    <div id="page-subtitle"><a href='index.html' title='Main Home'>Main</a> :: Invited Talks Tutorials
+                    </div>
+                </td>
+                <td align="right" width="120" style="padding: 0px; margin:0px; padding-top: 16px; border: none;">
+                    <center>
+
+                        <a href="index.html"><img height='73px' src="nikoletseas_photo3.jpg" border="0" /></a>
+
+                    </center>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="main">
+        <div id="menubar" style="display: none;">
+
+            <div id="wikicmds" align="right">
+
+                <ul>
+                    <li class='browse'><a accesskey='' class='selflink'
+                            href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.InvitedTalksTutorials'>View</a>
+                    </li>
+                    <li class='edit'><a accesskey='e' rel='nofollow' class='wikilink'
+                            href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.InvitedTalksTutorials?action=edit'>Edit</a>
+                    </li>
+                    <li class='diff'><a accesskey='h' rel='nofollow' class='wikilink'
+                            href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.InvitedTalksTutorials?action=diff'>History</a>
+                    </li>
+                    <li class='upload'><a accesskey='ak_attach' rel='nofollow' class='wikilink'
+                            href='http://mylonasg.cti.gr/pmwiki/index.php?n=Main.InvitedTalksTutorials?action=upload'>Attach</a>
+                    </li>
+                    <li class='print'><a accesskey='' rel='nofollow' class='wikilink' href='http://mylonasg.cti.gr/
+pmwiki/index.php?n=Main.InvitedTalksTutorials?action=print'>Print</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="clearer"></div>
+
+        </div>
+
+        <div class="content-mat">
+            <div id="content">
+                <div id='sidebar'>
+                    <ul>
+                        <li><a class='selflink' href='index.html'>Home Page</a>
+                            <!--</li><li><a class='wikilink' href='currentPositions.html'>Current Positions</a>-->
+                        </li>
+                        <li><a class='wikilink' href='researchInterests.html'>Research Interests</a>
+                        </li>
+                        <li><a class='wikilink' href='book.html'>Books</a>
+                        </li>
+                        <li><a class='wikilink' href='editorReviewer.html'>Editor of Journals</a>
+                        </li>
+                        <li><a class='wikilink' href='invitedTalksTutorials.html'>Invited Talks and Tutorials</a>
+                        </li>
+                        <li><a class='wikilink' href='scientificPublications.html'>Scientific Publications</a>
+                        </li>
+                        <li><a class='wikilink' href='conferenceActivities.html'>Conference Activities</a>
+                        <li><a class='wikilink' href='teaching.html'>Teaching</a>
+                        </li>
+                    </ul>
+                    <br>
+                    <ul>
+                        </li>
+                        <li><a class='wikilink' href='researchProjects.html'>Research Projects</a>
+                        </li>
+                        <li><a class='wikilink' href='teamMembers.html'>Team Members</a>
+                        </li>
+                        <li><a class='wikilink' href='articles.html'>Articles in Newspapers</a>
+                        </li>
+                        <li><a class='wikilink' href='contactInfo.html'>Contact Info</a>
+                        </li>
+                    </ul>
+                    <p class='vspace'></p>
+                </div>
+                <!--PageText-->
+
+                <div id='wikitext'>
+                    <h2>Invited Tutorials and Talks</h2>
+                    <!--p class='vspace'></p><p>(also available in <a class='urllink' href='uploads/Main/invited.doc' rel='nofollow'>.doc</a> and <a class='urllink' href='uploads/Main/invited.pdf' rel='nofollow'>.pdf</a> format)
+</p-->
+                    <p class='vspace'>20. Keynote Talk "On the shoulders of Tesla: Efficient Algorithms for Wireless
+                        Power Transfer in the Internet of Things", IoT Forum, Sao Paulo, Brazil, 2022.</p>
+                    </p>
+                    <p class='vspace'>20. Keynote Talk on Concepts and Methods for Wireless Power Transfer at the 20th
+                        ACM International Conference on Modeling, Analysis and Simulation of Wireless and Mobile Systems
+                        (MSWIM), Miami, USA, 2017.
+                    </p>
+                    <p class='vspace'>19. Keynote Talk on Models and Algorithms for Wireless Power Transfer at the 21st
+                        Pan-Hellenic Conference on Informatics (PCI), Larissa, Greece, 2017.
+                    </p>
+                    <p class='vspace'>18. Keynote Talk on Wireless Power Transfer Algorithms at the 13th International
+                        Conference on Distributed Computing in Sensor Systems (DCOSS), Ottawa, Canada, 2017.
+                    </p>
+
+                    <p class='vspace'>17. S. Nikoletseas, "Emerging Trends in IoT Test beds", IoT Week 2016, Serbia,
+                        2016.
+                    </p>
+                    <p class='vspace'>16. S. Nikoletseas, "Wireless Energy Recharge for Mobile Crowdsensing in IoT
+                        Systems", Invited tutorial at the SenZations Summer School, Croatia, 2014.
+                    </p>
+
+                    <p class='vspace'>15. S. Nikoletseas, "Probabilistic algorithms for fundamental problems in
+                        distributed networks", Invited talk at the Network Science Workshop, Hong Kong, July 25-27,
+                        2012,
+                    </p>
+
+                    <p class='vspace'>14. S. Nikoletseas, �Models and Methods for Maintaining Connectivity in Sensor
+                        Networks�, Keynote Talk at the 2nd International Workshop on Interconnections of Wireless Sensor
+                        Networks (IWSN-2011), Barcelona, 2011.</p>
+
+                    <p class='vspace'>13. S. Nikoletseas, �Algorithmic Challenges for Sensor Networks in Environmental
+                        Monitoring�, 9th Workshop in Speckled Computing, Edinburgh, 2011.</p>
+
+                    <p class='vspace'>12. S. Nikoletseas, "Distributed, Local Energy-Balance Algorithms for Prolonging
+                        the Lifetime of Sensor Networks",
+                        Invited Talk at the International Workshop on Localized Algorithms and Protocols for Wireless
+                        Sensor Networks (LOCALGOS 2009),
+                        in conjunction with the 2009 International Conference on Distributed Computing in Sensor Systems
+                        (DCOSS '09), Los Angeles, USA, 2009.</p>
+
+                    <p class='vspace'>11. S. Nikoletseas, "Smart Sensors and CS: Interactions and Challenges
+                        towards the Internet of Things", Invited Talk at the Computer Sience
+                        Department at the School of Siences of the University of Geneva,
+                        Switzerlad, February 2009.</p>
+
+                    <p class='vspace'>10. S. Nikoletseas, "Adaptive Probabilistic Algorithms for Wireless Sensor
+                        Networks", Keynote Talk at the the 7th International Conference on AD-HOC
+                        Networks & Wireless Networks (ADHOC-NOW), Nice, France, 2008.</p>
+
+
+                    <p class='vspace'>9. S. Nikoletseas, "Efficient Protocol Design and Applications Development
+                        for Wireless Sensor Networks", Invited Tutorial at the International
+                        Summer School on Applications of Wireless Sensor Networks (SenZations 07),
+                        in conjunction with EUROCON 2007, Warsaw, Poland, 2007.</p>
+
+
+                    <p class='vspace'>8. S. Nikoletseas, "Models, Methods and Algorithms for Wireless Sensors in
+                        Embedded Systems", Invited Tutorial at the International Spring School on
+                        Wearable Computers, Villars sur Ollon, Switzerland, 2007.</p>
+
+
+                    <p class='vspace'>7. S. Nikoletseas, "Randomized Algorithms for Wireless Sensor Networks",
+                        Invited Speaker at the Scientific Meeting on Dynamic Networks, Maribor,
+                        Slovenia, 2007.</p>
+
+                    <p class='vspace'>6. S. Nikoletseas, "Adaptive Power Saving for Heterogeneous Sensor
+                        Networks with Incremental Deployment", Invited Talk at the International
+                        Workshop on Mobility and Scalability in Wireless Sensor Networks (MSWSN),
+                        in conjunction with 2006 International Conference on Distributed Computing
+                        in Sensor Systems (DCOSS '06), San Francisco, USA, 2006.</p>
+
+
+                    <p class='vspace'>5. S. Nikoletseas, "Large Scale Experimental Evaluation of Protocols for
+                        Wireless Sensor Networks", Keynote Talk at WEA 06 (5th International
+                        Workshop on Efficient and Experimental Algorithms), Menorca Island, Spain,
+                        2006.</p>
+
+
+                    <p class='vspace'>4. S. Nikoletseas, "Models and Algorithms for Wireless Sensor Networks
+                        (Smart Dust)", invited talk at the 32nd SOFSEM Conference on "Current
+                        Trends in Theory and Practice of Computer Science", Prag, 2006.</p>
+
+
+                    <p class='vspace'>3. S. Nikoletseas, "Power-Aware Data Dissemination Protocols for Wireless
+                        Sensor Networks", invited talk at the 14th International Workshop on
+                        Parallel and Distributed Real-time Systems (WPDRTS), in conjunction with
+                        IPDPS 2006.</p>
+
+
+                    <p class='vspace'>2. S. Nikoletseas, "Algorithms and Protocols for Wireless Sensor
+                        Networks", Invited Tutorial, in the 7th ACM/IEEE MSWiM 2004 (the Seventh
+                        ACM/IEEE International Symposium on Modeling, Analysis and Simulation of
+                        Wireless and Mobile Systems), Venice, Italy, 2004.</p>
+
+
+                    <p class='vspace'>1. S. Nikoletseas, "Efficient Data Propagation Algorithms in Smart Dust
+                        Networks", Invited Tutorial, in the 2nd International Information
+                        Technology Symposium (I2TS), Brazil, 2003.</p>
+
+
+                </div>
+
+            </div>
+            <div class="clearer"></div>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div id="copyright">
+            <span style="float: left; padding-left: 20px;">
+                &copy; 2023
+            </span>
+            <span style="float: right; display: block; padding-right: 20px;">
+                <!--<a href="indexGr.html" onMouseOver="grflag.src=grflagon.src" onMouseOut="grflag.src=grflagoff.src"><img src="grflagup.gif"></a>-->
+
+                <span id='sitepoweredby' title='Powered by PmWiki'>
+
+                    Powered by <a href='http://www.pmichaud.com/wiki/PmWiki/PmWiki' title='PmWiki Home'>PmWiki</a>
+                </span>
+            </span>
+        </div>
+    </div>
+
+</body>
+
+</html>
